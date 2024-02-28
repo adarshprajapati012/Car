@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Car Shop - Cart</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            background-image: url("https://img.freepik.com/free-photo/schloss-pond-landscape-weather-nature_1112-1060.jpg?w=996&t=st=1706722311~exp=1706722911~hmac=e8a9d022414b0929da90a5044a021237da253a216a3c292efe65679b45e55e4d");
+            background-position: center;
+            background-size: cover;
+        }
+
+        header {
+            background-color: #00064e;
+            color: #fff;
+            text-align: center;
+            margin-top: -22px;
+            padding: 1px;
+        }
+
+        main {
+            max-width: 700px;
+            height: 400px;
+            margin: 20px auto;
+            padding: 5px 20px;
+            background-color: #f3f3f3;
+            border-radius: 8px;
+            box-shadow: 0 0 22px rgba(0, 0, 63, 0.555);
+        }
+
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 0px;
+        }
+
+        th,
+        td {
+            border: 1px solid #005081;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #005081;
+            color: #fff;
+        }
+
+        .total {
+            margin-top: 20px;
+            margin-right: 27px;
+            text-align: right;
+        }
+
+        .total span {
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .checkout-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px;
+            width: 150px;
+            background-color: #07376fe4;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+            float: right;
+        }
+
+        .checkout-btn:hover {
+            background-color: #2c6948;
+        }
+
+        .car-image {
+            max-width: 100px;
+            max-height: 100px;
+            border-radius: 8px;
+        }
+
+        .item-details {
+            display: flex;
+            align-items: center;
+        }
+
+        .item-name {
+            margin-left: -2px;
+            font-size: 1.2em;
+            padding: 22px 0px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Cart-CarShop</h1>
+    </header>
+
+    <main>
+        <h2>My Cart</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Image</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="item-details">
+                        <span class="item-name">Rolls-Royce Spectre</span>
+                    </td>
+                    <td><img src="https://hips.hearstapps.com/hmg-prod/images/1-spectre-unveiled-the-first-fully-electric-rolls-royce-front-3-4-1666037360.jpg?crop=1xw:1xh;center,top&resize=980:*"
+                            alt="Car Model 1" class="car-image"></td>
+                    <td> $422,750</td>
+                </tr>
+                <tr>
+                    <td class="item-details">
+                        <span class="item-name">Toyota Crown 2023</span>
+                    </td>
+                    <td><img src="https://thumbor.forbes.com/thumbor/fit-in/960x600/https://www.forbes.com/wheels/wp-content/uploads/2022/10/2023_Toyota_Crown_g1.jpg"
+                            alt="Car Model 2" class="car-image"></td>
+                    <td>$41,045</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="total">
+            <span>Total: $4,63,795</span>
+        </div>
+        <a href="#" class="checkout-btn">Proceed to Checkout</a>
+    </main>
+
+</body>
+
+</html>

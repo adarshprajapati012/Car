@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>User Registration</title>
+   <style>
+      body {
+         font-family: 'Arial', sans-serif;
+         background-image: url("https://img.freepik.com/free-photo/schloss-pond-landscape-weather-nature_1112-1060.jpg?w=996&t=st=1706722311~exp=1706722911~hmac=e8a9d022414b0929da90a5044a021237da253a216a3c292efe65679b45e55e4d");
+         background-position: center;
+         background-size: cover;
+         margin: 0;
+         padding: 0;
+      }
+
+      center {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         margin-top: 50px;
+      }
+
+      img {
+         width: 100px;
+         height: auto;
+         margin-bottom: 20px;
+      }
+
+      form {
+         background-color: #00146d;
+         padding: 20px;
+         border-radius: 8px;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+         width: 80%;
+         max-width: 600px;
+      }
+
+      label {
+         display: block;
+         margin-bottom: 8px;
+         font-weight: bold;
+         color: #ecf5fa;
+         text-align: left;
+      }
+
+      input,
+      select,
+      textarea {
+         width: 100%;
+         padding: 10px;
+         margin-bottom: 16px;
+         border: 1px solid #bfc9d4;
+         border-radius: 4px;
+         box-sizing: border-box;
+         background-color: #e1f5ff;
+         color: #333333;
+      }
+
+      input[type="radio"],
+      input[type="checkbox"] {
+         margin-bottom: 8px;
+      }
+
+      textarea {
+         resize: horizontal;
+      }
+
+      select {
+         width: 100%;
+      }
+
+      .row {
+         display: flex;
+         justify-content: space-between;
+      }
+
+      .column {
+         width: 48%;
+      }
+
+      .radio-group,
+      .checkbox-group {
+         margin-bottom: 16px;
+      }
+
+      .radio-group label,
+      .checkbox-group label {
+         color: #f2f2f2;
+         text-align: left;
+         display: block;
+
+      }
+
+      .radio-options,
+      .checkbox-options {
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         align-items: center;
+         margin-top: 15px;
+      }
+
+      .checkbox-options label {
+         margin-bottom: 8px;
+         color: #f2f2f2;
+         text-align: right;
+         display: flex;
+         align-items: center;
+      }
+
+      .checkbox-options input {
+         margin-left: 30px;
+      }
+
+      input[type="submit"] {
+         background-color: #0066cc;
+         color: #ffffff;
+         padding: 12px 20px;
+         border: none;
+         border-radius: 4px;
+         cursor: pointer;
+         font-size: 16px;
+      }
+
+      input[type="submit"]:hover {
+         background-color: #004080;
+      }
+   </style>
+</head>
+
+<body>
+   <center>
+      <img src="logo.png" alt="Company Logo">
+      <form>
+         <div class="row">
+            <div class="column">
+               <label for="name">Name</label>
+               <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+            <div class="column">
+               <label for="password">Password</label>
+               <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+         </div>
+         <div class="row">
+            <div class="column">
+               <label for="email">E-Mail</label>
+               <input type="text" id="email" name="email" placeholder="Enter your email address" required>
+            </div>
+            <div class="column">
+               <label for="phone">Phone No</label>
+               <input type="text" id="phone1" name="phone1" placeholder="Area Code" style="width: 25%;" required>
+               <input type="text" id="phone2" name="phone2" placeholder="Phone Number" style="width: 70%;" required>
+            </div>
+         </div>
+         <div class="row">
+            <div class="column">
+               <div class="radio-group">
+                  <label for="gender">Gender</label>
+                  <select id="gender" name="gender" required>
+                     <option value="" disabled selected>Select your gender</option>
+                     <option value="male">Male</option>
+                     <option value="female">Female</option>
+                     <option value="other">Other</option>
+                  </select>
+               </div>
+            </div>
+            <div class="column">
+               <label for="dob">Date of Birth</label>
+               <input type="date" id="dob" name="dob" required>
+            </div>
+         </div>
+         <div class="row">
+            <div class="column">
+               <div class="checkbox-group">
+                  <label>Car Types/Model</label>
+                  <div class="checkbox-options">
+                     <label for="LUXURY">
+                        <input type="checkbox" id="LUXURY" name="LUXURY">
+                        LUXURY
+                     </label>
+                     <label for="SPORTS">
+                        <input type="checkbox" id="SPORTS" name="SPORTS">
+                        SPORTS
+                     </label>
+                     <label for="HYBRID">
+                        <input type="checkbox" id="HYBRID" name="HYBRID">
+                        HYBRID
+                     </label>
+                     <label for="SUVs">
+                        <input type="checkbox" id="SUVs" name="SUVs">
+                        SUVs
+                     </label>
+                     <label for="other">
+                        <input type="checkbox" id="other" name="other">
+                        Other
+                     </label>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <label for="address">Address</label>
+         <textarea id="address" name="address" rows="5" placeholder="Enter your address" required></textarea>
+         <input type="submit" value="Submit">
+      </form>
+   </center>
+</body>
+
+</html

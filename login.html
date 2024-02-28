@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Login - CarStore</title>
+   <style>
+      body {
+         margin: 0;
+         padding: 0;
+         font-family: Arial, sans-serif;
+         background-color: #f4f4f4;
+         background-image: url("https://img.freepik.com/free-photo/schloss-pond-landscape-weather-nature_1112-1060.jpg?w=996&t=st=1706722311~exp=1706722911~hmac=e8a9d022414b0929da90a5044a021237da253a216a3c292efe65679b45e55e4d");
+         background-position: center;
+         background-size: cover;
+      }
+
+      .login-container {
+         width: 300px;
+         margin: 100px auto;
+         background-color: #000787;
+         padding: 20px;
+         border-radius: 10px;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .login-container h2 {
+         text-align: center;
+         color: white;
+      }
+
+      .login-form {
+         margin-top: 20px;
+      }
+
+      .form-group {
+         margin-bottom: 15px;
+      }
+
+      .form-group label {
+         display: block;
+         color: white;
+         margin-bottom: 5px;
+      }
+
+      .form-group input {
+         width: 100%;
+         padding: 8px;
+         box-sizing: border-box;
+         border: 1px solid #0082c8;
+         border-radius: 5px;
+      }
+
+      .form-group .button-container {
+         text-align: center;
+      }
+
+      .form-group button {
+         background-color: #0082c8;
+         color: white;
+         padding: 10px 20px;
+         border: none;
+         border-radius: 5px;
+         cursor: pointer;
+         margin-right: 10px;
+      }
+
+      .form-group button.reset {
+         background-color: #0082c8;
+      }
+   </style>
+</head>
+
+<body>
+   <div class="login-container">
+      <h2>Login to Your Account</h2>
+      <form class="login-form" action="#" method="post">
+         <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+         </div>
+         <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+         </div>
+         <div class="form-group button-container">
+            <button type="submit">Submit</button>
+            <button type="reset" class="reset">Reset</button>
+         </div>
+      </form>
+   </div>
+</body>
+
+</html>

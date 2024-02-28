@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Car Shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #1a216e;
+            padding: 10px;
+            text-align: center;
+            color: rgb(95, 180, 255);
+        }
+
+        nav {
+            background-color: #0a033f;
+            height: 10vh;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 30px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .nav-item {
+            position: absolute;
+            right: 100px;
+        }
+
+        .nav-item a:hover {
+            color: rgb(95, 180, 255);
+            transition: all ease-in-out 0.4s;
+        }
+
+        .logo {
+            border-radius: 55px;
+            width: 4vw;
+            margin-left: 5px;
+            transition: all ease-in-out 0.5s;
+        }
+
+        .logo:hover {
+            scale: 1.2;
+        }
+
+        .sidenav {
+            height: 70vw;
+            width: 0;
+            position: relative;
+            z-index: 1;
+            left: 0;
+            background-color: #000236;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+            line-height: 50px;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        #main {
+            transition: margin-left .5s;
+            padding: 16px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+
+        .main-content {
+            overflow: hidden;
+            margin-left: 0px;
+            padding: 0px;
+            display: flex;
+            background-image: url("https://img.freepik.com/free-photo/schloss-pond-landscape-weather-nature_1112-1060.jpg?w=996&t=st=1706722311~exp=1706722911~hmac=e8a9d022414b0929da90a5044a021237da253a216a3c292efe65679b45e55e4d");
+            background-position: center;
+            background-size: cover;
+        }
+
+        .main-in {
+            width: 100%;
+        }
+
+        .featured-cars {
+            font-size: 50px;
+            font-weight: 700;
+            font-family: 'Times New Roman', Times, serif;
+            margin-bottom: 45px;
+            margin-top: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .featured-cars:hover {
+            color: #0f0466;
+        }
+
+        .car-cont {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+
+        .card {
+            transition: all ease-in-out 0.4s;
+        }
+
+        .car-cont .card:hover {
+            scale: 1.05;
+        }
+
+        footer {
+            background-color: #000a42;
+            color: white;
+            margin-bottom: -10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        footer p {
+            margin-top: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h2>ONLINE CAR SHOP</h2>
+    </header>
+    <nav>
+        <img class="logo" src="logo.png" alt="Logo" width="100">
+        <div class="nav-item">
+            <a id="a1" href="#">Home</a>
+            <a href="login.html">Login</a>
+            <a href="Registration.html">Registration</a>
+            <a href="Catalogue.html">Catalogue</a>
+            <a href="cart.html">Cart</a>
+        </div>
+    </nav>
+    <div class="main-content">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <p style="color:whitesmoke; margin-left: 35px; margin-top: 23px;">Car Types</p>
+            <a href="#">LUXURY</a>
+            <a href="#">SPORTS</a>
+            <a href="#">HYBRID</a>
+            <a href="#">SUVs</a>
+            <a href="#">ELECTRIC</a>
+            <a href="#">MIDSIZE</a>
+        </div>
+        <span style="font-size:30px; margin-left: 24px; margin-top: 15px;cursor:pointer"
+            onclick="openNav()">&#9776;</span>
+        <div class="main-in">
+            <h3 class="featured-cars">- Find Your Perfect Car -</h3>
+            <div class="car-cont">
+                <div class="card" style="width: 15rem;">
+                    <img src="https://thumbor.forbes.com/thumbor/fit-in/960x600/https://www.forbes.com/wheels/wp-content/uploads/2023/08/2023_Lexus_LS_Gallery1.jpg"
+                        class="card-img-top" alt="car1">
+                    <div class="card-body">
+                        <h5 class="card-title"> Lexus LS 2023</h5>
+                        <p>PowerPulse Momentum</p>
+                        <p>Price:$78,535</p>
+                        <a href="#" class="btn btn-primary">Add To Cart</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <img src="https://thumbor.forbes.com/thumbor/fit-in/960x600/https://www.forbes.com/wheels/wp-content/uploads/2022/08/2023_Genesis_G90_Gallery1.jpg"
+                        class="card-img-top" alt="car2">
+                    <div class="card-body">
+                        <h5 class="card-title">Genesis G90</h5>
+                        <p>Price Starting From</p>
+                        <p> $88,400</p>
+                        <a href="#" class="btn btn-primary">Add To Cart</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <img src="https://thumbor.forbes.com/thumbor/fit-in/960x600/https://www.forbes.com/wheels/wp-content/uploads/2022/01/2022_Porsche_Panamera_Gallery1.jpg"
+                        class="card-img-top" alt="car3">
+                    <div class="card-body">
+                        <h5 class="card-title">Porsche Panamera</h5>
+                        <p> luxury-minded buyers</p>
+                        <p>Price: $88,400</p>
+                        <a href="#" class="btn btn-primary">Add To Cart</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <img src="https://thumbor.forbes.com/thumbor/fit-in/960x600/https://www.forbes.com/wheels/wp-content/uploads/2022/09/2023_Toyota_Supra_Gallery11.jpg"
+                        class="card-img-top" alt="car4">
+                    <div class="card-body">
+                        <h5 class="card-title"> Toyota GR-Supra</h5>
+                        <p> Fast and Furious MkIV </p>
+                        <p>Price:$43,540</p>
+                        <a href="#" class="btn btn-primary">Add To Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="car-cont">
+                <div class="card" style="width: 15rem;">
+                    <img src="https://thumbor.forbes.com/thumbor/fit-in/960x600/https://www.forbes.com/wheels/wp-content/uploads/2022/10/2023_Toyota_Crown_g1.jpg"
+                        class="card-img-top" alt="car5">
+                    <div class="card-body">
+                        <h5 class="card-title">Toyota Crown 2023</h5>
+                        <p>Limited and Platinum Hybrid car</p>
+                        <p>Price: $41,045</p>
+                        <a href="#" class="btn btn-primary">Add To Cart</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 15rem; ">
+                    <img src="https://thumbor.forbes.com/thumbor/fit-in/960x600/https://www.forbes.com/wheels/wp-content/uploads/2023/05/2023_Nissan_Sentra_Gallery1.jpg"
+                        class="card-img-top" alt="car6">
+                    <div class="card-body">
+                        <h5 class="card-title">Nissan Sentra</h5>
+                        <p> Price and style are both very friendly.</p>
+                        <p>Price: $21,145</p>
+                        <a href="#" class="btn btn-primary">Add To Cart</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <img src="https://hips.hearstapps.com/hmg-prod/images/large-8456-2022audirse-trongteuropeanmodelshown-1621259995.jpg?crop=0.808xw:0.809xh;0.0782xw,0.191xh&resize=980:*"
+                        class="card-img-top" alt="car7">
+                    <div class="card-body">
+                        <h5 class="card-title">Audi e-tron GT 2024</h5>
+                        <p> EPA- range: Up to 238 miles.</p>
+                        <p>Price: $107,995</p>
+                        <a href="#" class="btn btn-primary">Add To Cart</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 15rem;">
+                    <img src="https://hips.hearstapps.com/hmg-prod/images/1-spectre-unveiled-the-first-fully-electric-rolls-royce-front-3-4-1666037360.jpg?crop=1xw:1xh;center,top&resize=980:*"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Rolls-Royce Spectre</h5>
+                        <p>60 mph in just 4.2 seconds.</p>
+                        <p>Price: $422,750</p>
+                        <a href="#" class="btn btn-primary">Add To Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Online Car Shop. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
+</body>
+
+</html>
